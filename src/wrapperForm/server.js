@@ -1,7 +1,7 @@
-const express = require("express") /// aragacnuma ashxatanq@
-const cors = require("cors"); // caranas kpcnes reactin 
-const mongoose = require("mongoose"); // mangus data bazaina kpnum 
-const bodyParser = require("body-parser").urlencoded({extended:true}) // vor karenas inputneri het ashxates // urlencoded tuyla teli ashxatel urlneri het
+const express = require("express") 
+const cors = require("cors"); 
+const mongoose = require("mongoose"); 
+const bodyParser = require("body-parser").urlencoded({extended:true}) 
 const app = express();
 const nodemailer = require("nodemailer");
 const {MongoClient, ObjectID} = require("mongodb"); 
@@ -15,7 +15,7 @@ app.use(cors({
        credentials:true
 }));
 app.use(express.json())
-let schema = mongoose.Schema({  //nkaruma tabl@ mongoi  mej
+let schema = mongoose.Schema({  
        name: String,                 
        src: String,
        buy: Number,
@@ -42,9 +42,9 @@ let loginschema = mongoose.Schema({
        condition:Boolean
        
 })
-mongoose.connect("mongodb+srv://homeShop:erevan@abul.m5g87.mongodb.net/home_shop") // mongoi urlna 
+mongoose.connect("mongodb+srv://homeShop:erevan@abul.m5g87.mongodb.net/home_shop") 
 
-let model = mongoose.model("items",schema) // key@ u post@
+let model = mongoose.model("items",schema) 
 let login = mongoose.model("logins",loginschema)
 
 // app.get("/data/photo", (req,res)=>res.send(arr));
@@ -99,13 +99,7 @@ app.post("/creat", bodyParser, async (req, res)=>{
         else{
                res.sendStatus(404)
         } 
-//       if(req.files){
-//              let file=req.files.file;
-//              let filename=file.name;
-//               file.mv(__dirname+'/uploads/'+filename,()=>{
-//                             res.send("File Uploaded")
-//               })
-//       }
+
 })
 
 
@@ -198,7 +192,7 @@ switch(req.body.name){
 })
 
 app.get("/datashop",async( req,res)=>{
-     let persion = await model.find({}) // im persoina nuyn 
+     let persion = await model.find({})
      res.send(persion)      
        
 })
@@ -222,7 +216,6 @@ app.post("/login", bodyParser, async(req,res)=>{
                 dey:req.body.dey,
                 condition: true,
               }).save()
-             res.send("http://localhost:3000/")
        }else{
      
               res.sendStatus(404)
