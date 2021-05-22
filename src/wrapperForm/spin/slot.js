@@ -43,7 +43,7 @@ const [size , setSize] = useState(10)
         axis2:axisFun(Math.floor(Math.random()*2) +1,7),
         axis3:axisFun(Math.floor(Math.random()*2) +1,7),
         axis4:axisFun(Math.floor(Math.random()*2) +1,7),
-        axis5:axisFun(Math.floor(Math.random()*2) +1,7),//
+        axis5:axisFun(Math.floor(Math.random()*2) +1,7),
         axis6:axisFun(Math.floor(Math.random()*2) +1,7),
         axis7:axisFun(Math.floor(Math.random()*2) +1,7),
         axis8:axisFun(Math.floor(Math.random()*2) +1,7),
@@ -105,7 +105,6 @@ const [size , setSize] = useState(10)
                              <td><img src={`/axis/axis${axis.axis3}.png`}/></td>     
                              <td><img src={`/axis/axis${axis.axis4}.png`}/></td> 
                              <td><img src={`/axis/axis${axis.axis5}.png`}/></td>
-                               
                          </tr> 
                          <tr>
                              <td><img src={`/axis/axis${axis.axis6}.png`}/></td>   

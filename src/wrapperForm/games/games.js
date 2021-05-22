@@ -4,8 +4,6 @@ import Slot from "../spin/slot" ;
 
 const Games=()=>{
    
-
-
     return(
         <div className="gamesWrapper">
             <Slot />

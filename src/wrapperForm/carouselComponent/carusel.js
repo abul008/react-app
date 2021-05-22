@@ -8,7 +8,7 @@ const Carusel=(props)=>{
 
 const [transfer , settransfer] = useState("0%") ;
 const [animationName ,setAnimationName] = useState("mymove 10s infinite");
-const [background ,setBackground] = useState({backgroundone:"#faef03",backgroundtwo:"#faef03",backgroundtree:"#faef03"});
+const [background ,setBackground] = useState({backgroundone:"white",backgroundtwo:"white",backgroundtree:"white"});
 
 console.log(background.background1)
     return(
@@ -31,7 +31,7 @@ console.log(background.background1)
                  onClick={()=>{
                      settransfer("0%");
                      setAnimationName("mymove");
-                     setBackground({...background,backgroundone:"#fb4d01",backgroundtwo:"#faef03" ,backgroundtree:"#faef03" });
+                     setBackground({...background,backgroundone:"black",backgroundtwo:"white" ,backgroundtree:"white" });
                                         
                              }}>
                 </button>
@@ -40,7 +40,7 @@ console.log(background.background1)
                  onClick={()=>{
                     settransfer("-100%");
                     setAnimationName("mymove")
-                    setBackground({...background,backgroundone:"#faef03",backgroundtwo:"#fb4d01" ,backgroundtree:"#faef03" });
+                    setBackground({...background,backgroundone:"white",backgroundtwo:"black" ,backgroundtree:"white" });
                               }}>
                 </button>
                 <button  
@@ -48,7 +48,7 @@ console.log(background.background1)
                  onClick={()=>{
                     settransfer("-200%");
                     setAnimationName("mymove")
-                    setBackground({...background,backgroundone:"#faef03",backgroundtwo:"#faef03" ,backgroundtree:"red" });
+                    setBackground({...background,backgroundone:"white",backgroundtwo:"white" ,backgroundtree:"black" });
                             }}>
                 </button>
          </div>

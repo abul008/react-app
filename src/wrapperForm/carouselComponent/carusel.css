@@ -11,7 +11,8 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 560px;
+    /* max-height: 400px; */
+    height: 400px;
     display: flex;
  
 }
@@ -36,7 +37,7 @@
   }
 .caruselButton{
     position: absolute;
-    bottom: 46px;
+    bottom: 106px;
     width: 100%;
     display: flex;
     justify-content: center;

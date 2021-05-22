@@ -65,7 +65,7 @@ import { BsChevronLeft ,BsChevronRight ,BsChevronDoubleDown } from "react-icons/
                       <h2>Update and delete</h2>
                       <span onClick={()=>setUbdate(true)}><img src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" style={{width:"25px"}} /></span>
                   </div>
-               <select style={{display:"none"}} onClick={(e)=>{console.log(e.target.name,e.target.value)}}  name="name">
+                       <select style={{display:"none"}} onClick={(e)=>{console.log(e.target.name,e.target.value)}}  name="name">
                           { datas.texnika.map((data)=>{return(<option>{data.nameT}</option> )})}
                        </select>
              <div className="inputUbdate">   

@@ -39,11 +39,16 @@ function TechniqueNav(){
 
     return(
       <div>
-        
         <Router>
         <div className="phonesShop">
-        <Carusel src="/caruselPhoto/carusel.jpg" src1="/caruselPhoto/carusel1.jpg" src2="/caruselPhoto/carusel2.jpg" />
-        <Caruselmanu data={data.texnika} />
+                 <div className="CaruselCantrol">
+        <div className="CaruselImg">
+                <Carusel src="/caruselPhoto/carusel.jpg" src1="/caruselPhoto/carusel1.jpg" src2="/caruselPhoto/carusel2.jpg" />
+        </div>
+         <div className="caruselManu">
+                <Caruselmanu data={data.texnika} />
+         </div>
+         </div> 
         <Route path="/home/techniquenav/phone" component={Phoneshop} />
         <Route path="/home/techniquenav/tablet" component={Tabletshop} />
         <Route path="/home/techniquenav/watch" component={Watchshop} />
