@@ -1,4 +1,4 @@
-td img{
+ .slotForma table td img{
     width: 40px;
     width: 100%;
 }
@@ -36,24 +36,61 @@ td img{
 .slotForma table{
     width: 100%;
     height: 100%;
+    border: solid 2px black;
+    display: flex;
+    overflow: hidden;
 }
 .slotForma tbody{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
+    max-height: 302px;
+    width: 100%;
 }
 .slotForma tbody tr{
     width: 100%;
-    justify-content: space-around;
-    display: flex;
-}
-.slotForma td{
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
+    height: 100%;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    transition: 1s;
+
+}
+.animationTr{animation-duration: 1s;}
+.animationTr1{animation-duration: 1.5s;}
+.animationTr2{animation-duration: 2s;}
+.animationTr3{animation-duration: 2.5s;}
+.animationTr4{animation-duration: 2.8s;}
+
+@keyframes example {
+    from{margin-top: 0px;}
+    to{margin-top: 1600px;}
+}
+.slotForma td{
+    width: 53px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+.slotForma .tr{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* overflow: auto; */
+    overflow: hidden;
+    border-right: 1px #ffca086b solid;
+    border-left: 1px #ffca086b solid;
+    flex-direction: column;
+}
+.slotForma .tr::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+
 }
 .slotGames{
     width: 43%;
@@ -83,3 +120,18 @@ td img{
     position: absolute;
     background-color: red;
   }
+/* .slotRotate{
+    display: flex;
+    height: 100%;
+
+}
+  .slotRotate  tr{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+} */

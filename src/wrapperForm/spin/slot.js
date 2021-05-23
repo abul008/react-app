@@ -7,11 +7,11 @@ import { FiRefreshCw } from "react-icons/fi";
 const Spin=()=>{ 
 
 const [axis ,setAxis] = useState({axis1:1,axis2:5,axis3:7,axis4:5,axis5:3,axis6:4,axis7:7,axis8:5,axis9:7,axis10:4,axis11:4,axis12:4,axis13:2,axis14:4,axis15:1,axis16:4,axis17:5,axis18:3,axis19:5,axis20:3,})    
-const [item, setItem] = useState(0);
-const [item1, setItem1] = useState(0);
-const [item2, setItem2] = useState(0);
 const [mony ,setMoney] = useState(20000);
-const [size , setSize] = useState(10)
+const [size , setSize] = useState(10);
+const [scroll , setScroll] = useState(true);
+
+ 
 
     function playBoing(){
         const boing = document.getElementById('boing');
@@ -32,11 +32,30 @@ const [size , setSize] = useState(10)
      const axisFun=(min,max)=>{
          return Math.floor(Math.random()*(max - min + 1)) + min
      } 
-
-
+     let countre = []
+     let countre1 = []
+     let countre2 = []
+     let countre3 = []
+     let countre4 = []
+     for( let i = 0; i<= 20; i++){
+          countre.push(((Math.floor(Math.random()*2) + Math.floor(Math.random() * 7) )))
+     }
+     for( let i = 0; i<= 20; i++){
+          countre1.push(((Math.floor(Math.random()*2) + Math.floor(Math.random() * 7) )))
+     }
+     for( let i = 0; i<= 20; i++){
+          countre2.push(((Math.floor(Math.random()*2) + Math.floor(Math.random() * 7) )))
+     }
+     for( let i = 0; i<= 20; i++){
+          countre3.push(((Math.floor(Math.random()*2) + Math.floor(Math.random() * 7) )))
+     }
+     for( let i = 0; i<= 20; i++){
+          countre4.push(((Math.floor(Math.random()*2) + Math.floor(Math.random() * 7) )))
+     }
    function Spin(){
        
-
+    setScroll(!scroll)
+   
        setAxis(
            {...axis,
         axis1:axisFun(Math.floor(Math.random()*2) +1,7),
@@ -97,41 +116,58 @@ const [size , setSize] = useState(10)
                    
                  </div>   
                   <div className="slotForma">
-                    <table>
-                         <tbody>
-                          <tr>
+                    <table >
+                        <tbody className="slotRotate">
+                    <div className="tr">
+                          <tr className="animationTr" style={{animationName:scroll ? "" : "example"}}>
                              <td><img src={`/axis/axis${axis.axis1}.png`}/></td> 
                              <td><img src={`/axis/axis${axis.axis2}.png`}/></td>
                              <td><img src={`/axis/axis${axis.axis3}.png`}/></td>     
                              <td><img src={`/axis/axis${axis.axis4}.png`}/></td> 
-                             <td><img src={`/axis/axis${axis.axis5}.png`}/></td>
+                             { countre.map((data,i)=><td key={i}><img src={`/axis/axis${data}.png`}/></td>)}
+                                  
                          </tr> 
-                         <tr>
+                    </div>   
+                    <div className="tr">
+                         <tr className="animationTr1"  style={{animationName:scroll ? "" : "example"}}>
+                             <td><img src={`/axis/axis${axis.axis5}.png`}/></td>
                              <td><img src={`/axis/axis${axis.axis6}.png`}/></td>   
                              <td><img src={`/axis/axis${axis.axis7}.png`}/></td> 
                              <td><img src={`/axis/axis${axis.axis8}.png`}/></td>
-                             <td><img src={`/axis/axis${axis.axis9}.png`}/></td>
-                             <td><img src={`/axis/axis${axis.axis10}.png`}/></td>         
+                             { countre1.map((data,i)=><td key={i}><img src={`/axis/axis${data}.png`}/></td>)}
+                                    
                          </tr>
-                         <tr>
+                    </div>   
+                    <div className="tr">
+                         <tr className="animationTr2"  style={{animationName:scroll ? "" : "example"}}>
+                             <td><img src={`/axis/axis${axis.axis9}.png`}/></td>
+                             <td><img src={`/axis/axis${axis.axis10}.png`}/></td>  
                              <td><img src={`/axis/axis${axis.axis11}.png`}/></td>
                              <td><img src={`/axis/axis${axis.axis12}.png`}/></td> 
+                             { countre2.map((data,i)=><td key={i}><img src={`/axis/axis${data}.png`}/></td>)}
+                    </tr> 
+                    </div>   
+                    <div className="tr">
+                         <tr className="animationTr3" style={{animationName:scroll ? "" : "example"}}>
                              <td><img src={`/axis/axis${axis.axis13}.png`}/></td> 
                              <td><img src={`/axis/axis${axis.axis14}.png`}/></td>
-                             <td><img src={`/axis/axis${axis.axis15}.png`}/></td>     
-                         </tr> 
-                         <tr>
+                             <td><img src={`/axis/axis${axis.axis15}.png`}/></td> 
                              <td><img src={`/axis/axis${axis.axis16}.png`}/></td> 
+                             { countre3.map((data,i)=><td key={i}><img src={`/axis/axis${data}.png`}/></td>)}
+                         </tr>
+                    </div>    
+                    <div className="tr">      
+                          <tr className="animationTr4"  style={{animationName:scroll ? "" : "example"}}>
                              <td><img src={`/axis/axis${axis.axis17}.png`}/></td>
                              <td><img src={`/axis/axis${axis.axis18}.png`}/></td> 
                              <td><img src={`/axis/axis${axis.axis19}.png`}/></td> 
-                             <td><img src={`/axis/axis${axis.axis20}.png`}/></td> 
-                         </tr>
-                         <tr>
-
-                         </tr>
+                             <td><img src={`/axis/axis${axis.axis20}.png`}/></td>
+                             { countre4.map((data,i)=><td key={i}><img src={`/axis/axis${data}.png`}/></td>)}
+                          </tr>
+                    </div>           
                         </tbody>
                     </table>
+                    
                     <div className=""></div>
                 </div>
                 <div className="slotStavkaSize">
@@ -155,15 +191,24 @@ const [size , setSize] = useState(10)
                 </div>
             </div>    
             </div>  
+            
        <div className="slotWrapper">
            <div id="message">
                You know
-           </div>
+           </div>   
+    
+                  
            <audio id="boing">
-           <source src="horse.mp3" type="audio/mpeg"></source>
-           
+           {/* <source src="horse.mp3" type="audio/mpeg"></source> */}
+            
+  
+              
            </audio>
+
+    
+             
        </div>
+       
     </div>
    )
 
