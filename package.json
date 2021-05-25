@@ -10,6 +10,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
+    "howler": "^2.2.1",
     "mongoose": "^5.12.6",
     "node-index": "0.0.2",
     "nodemailer": "^6.6.0",
